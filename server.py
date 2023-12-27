@@ -29,10 +29,10 @@ def broadcast(message):
 def saveHistory(message):
     try:
         line = message.decode()
-        with open("chathistory.txt", "w") as file:
+        with open("chathistory.txt", "a") as file:
             file.write(line + '\n')
     except:
-        print("ERROR: unable to save messages into chathistory.txt")
+        print("ERROR: unable to save message into chathistory.txt")
 
 # Handling Messages From Clients
 def handle(client):
